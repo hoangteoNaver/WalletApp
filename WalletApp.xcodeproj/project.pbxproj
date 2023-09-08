@@ -1,0 +1,960 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		199B31712AA97B0800E99BD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199B31702AA97B0800E99BD1 /* Assets.xcassets */; };
+		199B31742AA97B0800E99BD1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199B31732AA97B0800E99BD1 /* Preview Assets.xcassets */; };
+		199B31762AA97B0800E99BD1 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31752AA97B0800E99BD1 /* Persistence.swift */; };
+		199B31792AA97B0800E99BD1 /* WalletApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 199B31772AA97B0800E99BD1 /* WalletApp.xcdatamodeld */; };
+		199B31832AA97B0800E99BD1 /* WalletAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31822AA97B0800E99BD1 /* WalletAppTests.swift */; };
+		199B318D2AA97B0800E99BD1 /* WalletAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B318C2AA97B0800E99BD1 /* WalletAppUITests.swift */; };
+		199B318F2AA97B0800E99BD1 /* WalletAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B318E2AA97B0800E99BD1 /* WalletAppUITestsLaunchTests.swift */; };
+		199B319C2AA97B3900E99BD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B319B2AA97B3900E99BD1 /* AppDelegate.swift */; };
+		199B319E2AA97B5B00E99BD1 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B319D2AA97B5B00E99BD1 /* Assembler.swift */; };
+		199B31A02AA97B7200E99BD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B319F2AA97B7200E99BD1 /* SceneDelegate.swift */; };
+		199B31AB2AA97C2100E99BD1 /* LoginAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31A62AA97C2100E99BD1 /* LoginAssembler.swift */; };
+		199B31AC2AA97C2100E99BD1 /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31A72AA97C2100E99BD1 /* LoginNavigator.swift */; };
+		199B31AD2AA97C2100E99BD1 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31A82AA97C2100E99BD1 /* LoginUseCase.swift */; };
+		199B31AE2AA97C2100E99BD1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31A92AA97C2100E99BD1 /* LoginView.swift */; };
+		199B31AF2AA97C2100E99BD1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31AA2AA97C2100E99BD1 /* LoginViewModel.swift */; };
+		199B31B62AA97C8300E99BD1 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31B12AA97C8300E99BD1 /* Observable.swift */; };
+		199B31B72AA97C8300E99BD1 /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31B22AA97C8300E99BD1 /* Publisher+.swift */; };
+		199B31B82AA97C8300E99BD1 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31B32AA97C8300E99BD1 /* Driver.swift */; };
+		199B31B92AA97C8300E99BD1 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31B42AA97C8300E99BD1 /* CancelBag.swift */; };
+		199B31BA2AA97C8300E99BD1 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31B52AA97C8300E99BD1 /* ViewModel.swift */; };
+		199B31BD2AA97CE800E99BD1 /* ShowingLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31BC2AA97CE800E99BD1 /* ShowingLogin.swift */; };
+		199B31C32AA97DF100E99BD1 /* AuthGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31C12AA97DF100E99BD1 /* AuthGateway.swift */; };
+		199B31C42AA97DF100E99BD1 /* GatewaysAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31C22AA97DF100E99BD1 /* GatewaysAssembler.swift */; };
+		199B31C62AA97E1500E99BD1 /* LoggingIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31C52AA97E1500E99BD1 /* LoggingIn.swift */; };
+		199B31C92AA97ECA00E99BD1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 199B31C82AA97ECA00E99BD1 /* FirebaseAuth */; };
+		199B31CB2AA97ECA00E99BD1 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 199B31CA2AA97ECA00E99BD1 /* FirebaseAuthCombine-Community */; };
+		199B31CD2AA97ECA00E99BD1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 199B31CC2AA97ECA00E99BD1 /* FirebaseDatabase */; };
+		199B31CF2AA97ECA00E99BD1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 199B31CE2AA97ECA00E99BD1 /* FirebaseFirestore */; };
+		199B31D12AA97ECA00E99BD1 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 199B31D02AA97ECA00E99BD1 /* FirebaseFirestoreCombine-Community */; };
+		199B31D32AA97ECA00E99BD1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 199B31D22AA97ECA00E99BD1 /* FirebaseStorage */; };
+		199B31D52AA97ECA00E99BD1 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 199B31D42AA97ECA00E99BD1 /* FirebaseStorageCombine-Community */; };
+		199B31DD2AA9A44E00E99BD1 /* CardsAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31D82AA9A44E00E99BD1 /* CardsAssembler.swift */; };
+		199B31DE2AA9A44E00E99BD1 /* CardsNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31D92AA9A44E00E99BD1 /* CardsNavigator.swift */; };
+		199B31DF2AA9A44E00E99BD1 /* CardsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31DA2AA9A44E00E99BD1 /* CardsUseCase.swift */; };
+		199B31E02AA9A44E00E99BD1 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31DB2AA9A44E00E99BD1 /* CardsView.swift */; };
+		199B31E12AA9A44E00E99BD1 /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31DC2AA9A44E00E99BD1 /* CardsViewModel.swift */; };
+		199B31E42AA9A4FB00E99BD1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31E32AA9A4FB00E99BD1 /* Card.swift */; };
+		199B31E72AA9A56A00E99BD1 /* GettingCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31E62AA9A56A00E99BD1 /* GettingCards.swift */; };
+		199B31E92AA9A5BF00E99BD1 /* CardGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31E82AA9A5BF00E99BD1 /* CardGateway.swift */; };
+		199B31F02AA9A6E200E99BD1 /* CardDetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31EB2AA9A6E200E99BD1 /* CardDetailAssembler.swift */; };
+		199B31F12AA9A6E200E99BD1 /* CardDetailNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31EC2AA9A6E200E99BD1 /* CardDetailNavigator.swift */; };
+		199B31F22AA9A6E200E99BD1 /* CardDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31ED2AA9A6E200E99BD1 /* CardDetailUseCase.swift */; };
+		199B31F32AA9A6E200E99BD1 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31EE2AA9A6E200E99BD1 /* CardDetailView.swift */; };
+		199B31F42AA9A6E200E99BD1 /* CardDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31EF2AA9A6E200E99BD1 /* CardDetailViewModel.swift */; };
+		199B31F62AA9A7D300E99BD1 /* CardRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31F52AA9A7D300E99BD1 /* CardRowView.swift */; };
+		199B31F82AA9ABA800E99BD1 /* ShowingCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31F72AA9ABA800E99BD1 /* ShowingCardDetail.swift */; };
+		199B31FA2AA9B5DA00E99BD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 199B31F92AA9B5D900E99BD1 /* GoogleService-Info.plist */; };
+		199B31FC2AA9B6A300E99BD1 /* ShowingCardList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31FB2AA9B6A300E99BD1 /* ShowingCardList.swift */; };
+		199B32032AA9BCC100E99BD1 /* AddCardAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31FE2AA9BCC100E99BD1 /* AddCardAssembler.swift */; };
+		199B32042AA9BCC100E99BD1 /* AddCardNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B31FF2AA9BCC100E99BD1 /* AddCardNavigator.swift */; };
+		199B32052AA9BCC100E99BD1 /* AddCardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B32002AA9BCC100E99BD1 /* AddCardUseCase.swift */; };
+		199B32062AA9BCC100E99BD1 /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B32012AA9BCC100E99BD1 /* AddCardView.swift */; };
+		199B32072AA9BCC100E99BD1 /* AddCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B32022AA9BCC100E99BD1 /* AddCardViewModel.swift */; };
+		199B32092AA9C51B00E99BD1 /* ActiveKeyboardField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B32082AA9C51B00E99BD1 /* ActiveKeyboardField.swift */; };
+		199B320B2AA9CC1800E99BD1 /* ShowingAddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B320A2AA9CC1800E99BD1 /* ShowingAddCard.swift */; };
+		199B322B2AAAD4B900E99BD1 /* AddingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199B322A2AAAD4B900E99BD1 /* AddingCard.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		199B317F2AA97B0800E99BD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 199B31612AA97B0600E99BD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 199B31682AA97B0600E99BD1;
+			remoteInfo = WalletApp;
+		};
+		199B31892AA97B0800E99BD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 199B31612AA97B0600E99BD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 199B31682AA97B0600E99BD1;
+			remoteInfo = WalletApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		199B31692AA97B0600E99BD1 /* WalletApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalletApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		199B31702AA97B0800E99BD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		199B31732AA97B0800E99BD1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		199B31752AA97B0800E99BD1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		199B31782AA97B0800E99BD1 /* WalletApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WalletApp.xcdatamodel; sourceTree = "<group>"; };
+		199B317E2AA97B0800E99BD1 /* WalletAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		199B31822AA97B0800E99BD1 /* WalletAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAppTests.swift; sourceTree = "<group>"; };
+		199B31882AA97B0800E99BD1 /* WalletAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		199B318C2AA97B0800E99BD1 /* WalletAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAppUITests.swift; sourceTree = "<group>"; };
+		199B318E2AA97B0800E99BD1 /* WalletAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		199B319B2AA97B3900E99BD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		199B319D2AA97B5B00E99BD1 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		199B319F2AA97B7200E99BD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		199B31A62AA97C2100E99BD1 /* LoginAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembler.swift; sourceTree = "<group>"; };
+		199B31A72AA97C2100E99BD1 /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
+		199B31A82AA97C2100E99BD1 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		199B31A92AA97C2100E99BD1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		199B31AA2AA97C2100E99BD1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		199B31B12AA97C8300E99BD1 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		199B31B22AA97C8300E99BD1 /* Publisher+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
+		199B31B32AA97C8300E99BD1 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		199B31B42AA97C8300E99BD1 /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		199B31B52AA97C8300E99BD1 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		199B31BC2AA97CE800E99BD1 /* ShowingLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingLogin.swift; sourceTree = "<group>"; };
+		199B31C12AA97DF100E99BD1 /* AuthGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthGateway.swift; sourceTree = "<group>"; };
+		199B31C22AA97DF100E99BD1 /* GatewaysAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GatewaysAssembler.swift; sourceTree = "<group>"; };
+		199B31C52AA97E1500E99BD1 /* LoggingIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingIn.swift; sourceTree = "<group>"; };
+		199B31D62AA987A100E99BD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		199B31D82AA9A44E00E99BD1 /* CardsAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsAssembler.swift; sourceTree = "<group>"; };
+		199B31D92AA9A44E00E99BD1 /* CardsNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsNavigator.swift; sourceTree = "<group>"; };
+		199B31DA2AA9A44E00E99BD1 /* CardsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsUseCase.swift; sourceTree = "<group>"; };
+		199B31DB2AA9A44E00E99BD1 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		199B31DC2AA9A44E00E99BD1 /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
+		199B31E32AA9A4FB00E99BD1 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		199B31E62AA9A56A00E99BD1 /* GettingCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GettingCards.swift; sourceTree = "<group>"; };
+		199B31E82AA9A5BF00E99BD1 /* CardGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGateway.swift; sourceTree = "<group>"; };
+		199B31EB2AA9A6E200E99BD1 /* CardDetailAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailAssembler.swift; sourceTree = "<group>"; };
+		199B31EC2AA9A6E200E99BD1 /* CardDetailNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailNavigator.swift; sourceTree = "<group>"; };
+		199B31ED2AA9A6E200E99BD1 /* CardDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailUseCase.swift; sourceTree = "<group>"; };
+		199B31EE2AA9A6E200E99BD1 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		199B31EF2AA9A6E200E99BD1 /* CardDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailViewModel.swift; sourceTree = "<group>"; };
+		199B31F52AA9A7D300E99BD1 /* CardRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRowView.swift; sourceTree = "<group>"; };
+		199B31F72AA9ABA800E99BD1 /* ShowingCardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingCardDetail.swift; sourceTree = "<group>"; };
+		199B31F92AA9B5D900E99BD1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		199B31FB2AA9B6A300E99BD1 /* ShowingCardList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingCardList.swift; sourceTree = "<group>"; };
+		199B31FE2AA9BCC100E99BD1 /* AddCardAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardAssembler.swift; sourceTree = "<group>"; };
+		199B31FF2AA9BCC100E99BD1 /* AddCardNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardNavigator.swift; sourceTree = "<group>"; };
+		199B32002AA9BCC100E99BD1 /* AddCardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardUseCase.swift; sourceTree = "<group>"; };
+		199B32012AA9BCC100E99BD1 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		199B32022AA9BCC100E99BD1 /* AddCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewModel.swift; sourceTree = "<group>"; };
+		199B32082AA9C51B00E99BD1 /* ActiveKeyboardField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveKeyboardField.swift; sourceTree = "<group>"; };
+		199B320A2AA9CC1800E99BD1 /* ShowingAddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowingAddCard.swift; sourceTree = "<group>"; };
+		199B322A2AAAD4B900E99BD1 /* AddingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingCard.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		199B31662AA97B0600E99BD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B31CD2AA97ECA00E99BD1 /* FirebaseDatabase in Frameworks */,
+				199B31D52AA97ECA00E99BD1 /* FirebaseStorageCombine-Community in Frameworks */,
+				199B31CF2AA97ECA00E99BD1 /* FirebaseFirestore in Frameworks */,
+				199B31C92AA97ECA00E99BD1 /* FirebaseAuth in Frameworks */,
+				199B31D12AA97ECA00E99BD1 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				199B31CB2AA97ECA00E99BD1 /* FirebaseAuthCombine-Community in Frameworks */,
+				199B31D32AA97ECA00E99BD1 /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B317B2AA97B0800E99BD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B31852AA97B0800E99BD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		199B31602AA97B0600E99BD1 = {
+			isa = PBXGroup;
+			children = (
+				199B31F92AA9B5D900E99BD1 /* GoogleService-Info.plist */,
+				199B316B2AA97B0600E99BD1 /* WalletApp */,
+				199B31812AA97B0800E99BD1 /* WalletAppTests */,
+				199B318B2AA97B0800E99BD1 /* WalletAppUITests */,
+				199B316A2AA97B0600E99BD1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		199B316A2AA97B0600E99BD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				199B31692AA97B0600E99BD1 /* WalletApp.app */,
+				199B317E2AA97B0800E99BD1 /* WalletAppTests.xctest */,
+				199B31882AA97B0800E99BD1 /* WalletAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		199B316B2AA97B0600E99BD1 /* WalletApp */ = {
+			isa = PBXGroup;
+			children = (
+				199B31D62AA987A100E99BD1 /* Info.plist */,
+				199B31B02AA97C4200E99BD1 /* Support */,
+				199B31A32AA97BC400E99BD1 /* Data */,
+				199B31A22AA97BBC00E99BD1 /* Domain */,
+				199B31A12AA97BB400E99BD1 /* Scene */,
+				199B31702AA97B0800E99BD1 /* Assets.xcassets */,
+				199B31752AA97B0800E99BD1 /* Persistence.swift */,
+				199B31772AA97B0800E99BD1 /* WalletApp.xcdatamodeld */,
+				199B31722AA97B0800E99BD1 /* Preview Content */,
+				199B319B2AA97B3900E99BD1 /* AppDelegate.swift */,
+				199B319D2AA97B5B00E99BD1 /* Assembler.swift */,
+				199B319F2AA97B7200E99BD1 /* SceneDelegate.swift */,
+			);
+			path = WalletApp;
+			sourceTree = "<group>";
+		};
+		199B31722AA97B0800E99BD1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				199B31732AA97B0800E99BD1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		199B31812AA97B0800E99BD1 /* WalletAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				199B31822AA97B0800E99BD1 /* WalletAppTests.swift */,
+			);
+			path = WalletAppTests;
+			sourceTree = "<group>";
+		};
+		199B318B2AA97B0800E99BD1 /* WalletAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				199B318C2AA97B0800E99BD1 /* WalletAppUITests.swift */,
+				199B318E2AA97B0800E99BD1 /* WalletAppUITestsLaunchTests.swift */,
+			);
+			path = WalletAppUITests;
+			sourceTree = "<group>";
+		};
+		199B31A12AA97BB400E99BD1 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				199B31FD2AA9BC8C00E99BD1 /* AddCard */,
+				199B31EA2AA9A6BD00E99BD1 /* CardDetail */,
+				199B31D72AA9A43000E99BD1 /* Cards */,
+				199B31BB2AA97CD700E99BD1 /* Navigators */,
+				199B31A52AA97C1000E99BD1 /* Login */,
+				199B31A42AA97BF100E99BD1 /* Main */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		199B31A22AA97BBC00E99BD1 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				199B31E22AA9A4E800E99BD1 /* Entities */,
+				199B31BE2AA97D9F00E99BD1 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		199B31A32AA97BC400E99BD1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				199B31C02AA97DC200E99BD1 /* Gateways */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		199B31A42AA97BF100E99BD1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		199B31A52AA97C1000E99BD1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				199B31A62AA97C2100E99BD1 /* LoginAssembler.swift */,
+				199B31A72AA97C2100E99BD1 /* LoginNavigator.swift */,
+				199B31A82AA97C2100E99BD1 /* LoginUseCase.swift */,
+				199B31A92AA97C2100E99BD1 /* LoginView.swift */,
+				199B31AA2AA97C2100E99BD1 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		199B31B02AA97C4200E99BD1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				199B31B42AA97C8300E99BD1 /* CancelBag.swift */,
+				199B31B32AA97C8300E99BD1 /* Driver.swift */,
+				199B31B12AA97C8300E99BD1 /* Observable.swift */,
+				199B31B22AA97C8300E99BD1 /* Publisher+.swift */,
+				199B31B52AA97C8300E99BD1 /* ViewModel.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		199B31BB2AA97CD700E99BD1 /* Navigators */ = {
+			isa = PBXGroup;
+			children = (
+				199B31BC2AA97CE800E99BD1 /* ShowingLogin.swift */,
+				199B31F72AA9ABA800E99BD1 /* ShowingCardDetail.swift */,
+				199B31FB2AA9B6A300E99BD1 /* ShowingCardList.swift */,
+				199B320A2AA9CC1800E99BD1 /* ShowingAddCard.swift */,
+			);
+			path = Navigators;
+			sourceTree = "<group>";
+		};
+		199B31BE2AA97D9F00E99BD1 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				199B31E52AA9A55E00E99BD1 /* Card */,
+				199B31BF2AA97DAF00E99BD1 /* Auth */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		199B31BF2AA97DAF00E99BD1 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				199B31C52AA97E1500E99BD1 /* LoggingIn.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		199B31C02AA97DC200E99BD1 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				199B31C12AA97DF100E99BD1 /* AuthGateway.swift */,
+				199B31C22AA97DF100E99BD1 /* GatewaysAssembler.swift */,
+				199B31E82AA9A5BF00E99BD1 /* CardGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		199B31D72AA9A43000E99BD1 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				199B31D82AA9A44E00E99BD1 /* CardsAssembler.swift */,
+				199B31D92AA9A44E00E99BD1 /* CardsNavigator.swift */,
+				199B31DA2AA9A44E00E99BD1 /* CardsUseCase.swift */,
+				199B31DB2AA9A44E00E99BD1 /* CardsView.swift */,
+				199B31DC2AA9A44E00E99BD1 /* CardsViewModel.swift */,
+				199B31F52AA9A7D300E99BD1 /* CardRowView.swift */,
+			);
+			path = Cards;
+			sourceTree = "<group>";
+		};
+		199B31E22AA9A4E800E99BD1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				199B31E32AA9A4FB00E99BD1 /* Card.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		199B31E52AA9A55E00E99BD1 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				199B31E62AA9A56A00E99BD1 /* GettingCards.swift */,
+				199B322A2AAAD4B900E99BD1 /* AddingCard.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		199B31EA2AA9A6BD00E99BD1 /* CardDetail */ = {
+			isa = PBXGroup;
+			children = (
+				199B31EB2AA9A6E200E99BD1 /* CardDetailAssembler.swift */,
+				199B31EC2AA9A6E200E99BD1 /* CardDetailNavigator.swift */,
+				199B31ED2AA9A6E200E99BD1 /* CardDetailUseCase.swift */,
+				199B31EE2AA9A6E200E99BD1 /* CardDetailView.swift */,
+				199B31EF2AA9A6E200E99BD1 /* CardDetailViewModel.swift */,
+			);
+			path = CardDetail;
+			sourceTree = "<group>";
+		};
+		199B31FD2AA9BC8C00E99BD1 /* AddCard */ = {
+			isa = PBXGroup;
+			children = (
+				199B31FE2AA9BCC100E99BD1 /* AddCardAssembler.swift */,
+				199B31FF2AA9BCC100E99BD1 /* AddCardNavigator.swift */,
+				199B32002AA9BCC100E99BD1 /* AddCardUseCase.swift */,
+				199B32012AA9BCC100E99BD1 /* AddCardView.swift */,
+				199B32022AA9BCC100E99BD1 /* AddCardViewModel.swift */,
+				199B32082AA9C51B00E99BD1 /* ActiveKeyboardField.swift */,
+			);
+			path = AddCard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		199B31682AA97B0600E99BD1 /* WalletApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199B31922AA97B0800E99BD1 /* Build configuration list for PBXNativeTarget "WalletApp" */;
+			buildPhases = (
+				199B31652AA97B0600E99BD1 /* Sources */,
+				199B31662AA97B0600E99BD1 /* Frameworks */,
+				199B31672AA97B0600E99BD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WalletApp;
+			packageProductDependencies = (
+				199B31C82AA97ECA00E99BD1 /* FirebaseAuth */,
+				199B31CA2AA97ECA00E99BD1 /* FirebaseAuthCombine-Community */,
+				199B31CC2AA97ECA00E99BD1 /* FirebaseDatabase */,
+				199B31CE2AA97ECA00E99BD1 /* FirebaseFirestore */,
+				199B31D02AA97ECA00E99BD1 /* FirebaseFirestoreCombine-Community */,
+				199B31D22AA97ECA00E99BD1 /* FirebaseStorage */,
+				199B31D42AA97ECA00E99BD1 /* FirebaseStorageCombine-Community */,
+			);
+			productName = WalletApp;
+			productReference = 199B31692AA97B0600E99BD1 /* WalletApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		199B317D2AA97B0800E99BD1 /* WalletAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199B31952AA97B0800E99BD1 /* Build configuration list for PBXNativeTarget "WalletAppTests" */;
+			buildPhases = (
+				199B317A2AA97B0800E99BD1 /* Sources */,
+				199B317B2AA97B0800E99BD1 /* Frameworks */,
+				199B317C2AA97B0800E99BD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				199B31802AA97B0800E99BD1 /* PBXTargetDependency */,
+			);
+			name = WalletAppTests;
+			productName = WalletAppTests;
+			productReference = 199B317E2AA97B0800E99BD1 /* WalletAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		199B31872AA97B0800E99BD1 /* WalletAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 199B31982AA97B0800E99BD1 /* Build configuration list for PBXNativeTarget "WalletAppUITests" */;
+			buildPhases = (
+				199B31842AA97B0800E99BD1 /* Sources */,
+				199B31852AA97B0800E99BD1 /* Frameworks */,
+				199B31862AA97B0800E99BD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				199B318A2AA97B0800E99BD1 /* PBXTargetDependency */,
+			);
+			name = WalletAppUITests;
+			productName = WalletAppUITests;
+			productReference = 199B31882AA97B0800E99BD1 /* WalletAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		199B31612AA97B0600E99BD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					199B31682AA97B0600E99BD1 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					199B317D2AA97B0800E99BD1 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 199B31682AA97B0600E99BD1;
+					};
+					199B31872AA97B0800E99BD1 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 199B31682AA97B0600E99BD1;
+					};
+				};
+			};
+			buildConfigurationList = 199B31642AA97B0600E99BD1 /* Build configuration list for PBXProject "WalletApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 199B31602AA97B0600E99BD1;
+			packageReferences = (
+				199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 199B316A2AA97B0600E99BD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				199B31682AA97B0600E99BD1 /* WalletApp */,
+				199B317D2AA97B0800E99BD1 /* WalletAppTests */,
+				199B31872AA97B0800E99BD1 /* WalletAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		199B31672AA97B0600E99BD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B31742AA97B0800E99BD1 /* Preview Assets.xcassets in Resources */,
+				199B31FA2AA9B5DA00E99BD1 /* GoogleService-Info.plist in Resources */,
+				199B31712AA97B0800E99BD1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B317C2AA97B0800E99BD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B31862AA97B0800E99BD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		199B31652AA97B0600E99BD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B31F82AA9ABA800E99BD1 /* ShowingCardDetail.swift in Sources */,
+				199B31B82AA97C8300E99BD1 /* Driver.swift in Sources */,
+				199B31E92AA9A5BF00E99BD1 /* CardGateway.swift in Sources */,
+				199B31F22AA9A6E200E99BD1 /* CardDetailUseCase.swift in Sources */,
+				199B31F32AA9A6E200E99BD1 /* CardDetailView.swift in Sources */,
+				199B32052AA9BCC100E99BD1 /* AddCardUseCase.swift in Sources */,
+				199B31C42AA97DF100E99BD1 /* GatewaysAssembler.swift in Sources */,
+				199B31E42AA9A4FB00E99BD1 /* Card.swift in Sources */,
+				199B31BD2AA97CE800E99BD1 /* ShowingLogin.swift in Sources */,
+				199B31B72AA97C8300E99BD1 /* Publisher+.swift in Sources */,
+				199B31B62AA97C8300E99BD1 /* Observable.swift in Sources */,
+				199B31792AA97B0800E99BD1 /* WalletApp.xcdatamodeld in Sources */,
+				199B31A02AA97B7200E99BD1 /* SceneDelegate.swift in Sources */,
+				199B31DF2AA9A44E00E99BD1 /* CardsUseCase.swift in Sources */,
+				199B31E12AA9A44E00E99BD1 /* CardsViewModel.swift in Sources */,
+				199B31F42AA9A6E200E99BD1 /* CardDetailViewModel.swift in Sources */,
+				199B31DE2AA9A44E00E99BD1 /* CardsNavigator.swift in Sources */,
+				199B31762AA97B0800E99BD1 /* Persistence.swift in Sources */,
+				199B31BA2AA97C8300E99BD1 /* ViewModel.swift in Sources */,
+				199B31AC2AA97C2100E99BD1 /* LoginNavigator.swift in Sources */,
+				199B32062AA9BCC100E99BD1 /* AddCardView.swift in Sources */,
+				199B31F62AA9A7D300E99BD1 /* CardRowView.swift in Sources */,
+				199B319C2AA97B3900E99BD1 /* AppDelegate.swift in Sources */,
+				199B322B2AAAD4B900E99BD1 /* AddingCard.swift in Sources */,
+				199B31E02AA9A44E00E99BD1 /* CardsView.swift in Sources */,
+				199B319E2AA97B5B00E99BD1 /* Assembler.swift in Sources */,
+				199B320B2AA9CC1800E99BD1 /* ShowingAddCard.swift in Sources */,
+				199B31B92AA97C8300E99BD1 /* CancelBag.swift in Sources */,
+				199B31F02AA9A6E200E99BD1 /* CardDetailAssembler.swift in Sources */,
+				199B31FC2AA9B6A300E99BD1 /* ShowingCardList.swift in Sources */,
+				199B31AB2AA97C2100E99BD1 /* LoginAssembler.swift in Sources */,
+				199B31DD2AA9A44E00E99BD1 /* CardsAssembler.swift in Sources */,
+				199B31AF2AA97C2100E99BD1 /* LoginViewModel.swift in Sources */,
+				199B32042AA9BCC100E99BD1 /* AddCardNavigator.swift in Sources */,
+				199B32072AA9BCC100E99BD1 /* AddCardViewModel.swift in Sources */,
+				199B31F12AA9A6E200E99BD1 /* CardDetailNavigator.swift in Sources */,
+				199B32032AA9BCC100E99BD1 /* AddCardAssembler.swift in Sources */,
+				199B31C62AA97E1500E99BD1 /* LoggingIn.swift in Sources */,
+				199B31AE2AA97C2100E99BD1 /* LoginView.swift in Sources */,
+				199B31C32AA97DF100E99BD1 /* AuthGateway.swift in Sources */,
+				199B31E72AA9A56A00E99BD1 /* GettingCards.swift in Sources */,
+				199B32092AA9C51B00E99BD1 /* ActiveKeyboardField.swift in Sources */,
+				199B31AD2AA97C2100E99BD1 /* LoginUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B317A2AA97B0800E99BD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B31832AA97B0800E99BD1 /* WalletAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		199B31842AA97B0800E99BD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199B318D2AA97B0800E99BD1 /* WalletAppUITests.swift in Sources */,
+				199B318F2AA97B0800E99BD1 /* WalletAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		199B31802AA97B0800E99BD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 199B31682AA97B0600E99BD1 /* WalletApp */;
+			targetProxy = 199B317F2AA97B0800E99BD1 /* PBXContainerItemProxy */;
+		};
+		199B318A2AA97B0800E99BD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 199B31682AA97B0600E99BD1 /* WalletApp */;
+			targetProxy = 199B31892AA97B0800E99BD1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		199B31902AA97B0800E99BD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		199B31912AA97B0800E99BD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		199B31932AA97B0800E99BD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WalletApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WalletApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WalletApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		199B31942AA97B0800E99BD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WalletApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WalletApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WalletApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		199B31962AA97B0800E99BD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WalletAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalletApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WalletApp";
+			};
+			name = Debug;
+		};
+		199B31972AA97B0800E99BD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WalletAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalletApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WalletApp";
+			};
+			name = Release;
+		};
+		199B31992AA97B0800E99BD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WalletAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WalletApp;
+			};
+			name = Debug;
+		};
+		199B319A2AA97B0800E99BD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WalletAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WalletApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		199B31642AA97B0600E99BD1 /* Build configuration list for PBXProject "WalletApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199B31902AA97B0800E99BD1 /* Debug */,
+				199B31912AA97B0800E99BD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		199B31922AA97B0800E99BD1 /* Build configuration list for PBXNativeTarget "WalletApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199B31932AA97B0800E99BD1 /* Debug */,
+				199B31942AA97B0800E99BD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		199B31952AA97B0800E99BD1 /* Build configuration list for PBXNativeTarget "WalletAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199B31962AA97B0800E99BD1 /* Debug */,
+				199B31972AA97B0800E99BD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		199B31982AA97B0800E99BD1 /* Build configuration list for PBXNativeTarget "WalletAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				199B31992AA97B0800E99BD1 /* Debug */,
+				199B319A2AA97B0800E99BD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		199B31C82AA97ECA00E99BD1 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		199B31CA2AA97ECA00E99BD1 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		199B31CC2AA97ECA00E99BD1 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		199B31CE2AA97ECA00E99BD1 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		199B31D02AA97ECA00E99BD1 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		199B31D22AA97ECA00E99BD1 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		199B31D42AA97ECA00E99BD1 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 199B31C72AA97ECA00E99BD1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		199B31772AA97B0800E99BD1 /* WalletApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				199B31782AA97B0800E99BD1 /* WalletApp.xcdatamodel */,
+			);
+			currentVersion = 199B31782AA97B0800E99BD1 /* WalletApp.xcdatamodel */;
+			path = WalletApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 199B31612AA97B0600E99BD1 /* Project object */;
+}
